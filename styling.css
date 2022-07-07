@@ -40,8 +40,3 @@ body {
     padding: 8px;
     font-family: 'Courier New', Courier, monospace;
 }
-
-.color button:hover {
-    background-color: white;
-    color: black;
-}
