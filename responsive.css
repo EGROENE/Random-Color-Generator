@@ -1,0 +1,41 @@
+@media screen and (max-width: 768px) {
+    .color {
+        margin: 118px 213px;
+    }   
+    
+    #hex {
+        font-size: 32px;
+    }
+
+    .color button {
+        font-size: 20px;
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #heading {
+        font-size: small;
+    }
+
+    .color {
+        margin: 89px 66px;
+    }
+
+
+}
+
+@media screen and (max-width: 325px) {
+    .color {
+        margin: 101px 66px;
+    }
+
+    #hex {
+        font-size: 25px;
+    }
+
+    .color button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

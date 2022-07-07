@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+
+    <!--Link stylesheets-->
+    <link rel="stylesheet" href="./styling.css">
+    <link rel="stylesheet" href="./responsive.css">
+</head>
+<!--Also generate random color upon page loading-->
+<body onload="getNewColor()">
+    <div id="heading">
+        <h1>Welcome to the Random Color Generator!</h1>
+        <h2>Please select a color by clicking the button below.</h2>
+    </div>
+    <div class="color">
+        <span id="hex"></span>
+        <button onclick="getNewColor()">Get New Color!</button>
+    </div>
+    <script>
+        function getNewColor() {
+            // Less-efficient way of declaring two vars:
+            /* var symbols, color;
+            symbols = '0123456789ABCDEF';
+            color = '#' */
+            // More-efficient way:
+            let symbols = '0123456789ABCDEF';
+            let color = '#'
+            for (let i = 0; i < 6; i++) { // Hex code can only go up to 6, so i < 6. This loop runs once for every function call.
+                color = color + symbols[Math.floor(Math.random() * 16)]; // 16 because of all the different possibilities in a hex code
+            }
+            document.body.style.background = color; // changes the background of the body to the value of var color
+            document.getElementById("hex").textContent = color; /* text value of var color (current color's hex code) is displayed above the button & inside the span tag */
+        }
+    </script>
+</body>
+</html>

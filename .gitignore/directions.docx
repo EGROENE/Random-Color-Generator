@@ -1,0 +1,13 @@
+ON HTML:
+1. Add a heading section
+2. Add a div where the hex code of the current color can go & below which is a button that returns a new random color when clicked.
+
+ON JS:
+1. Create a function that generates a random hex code. (Hint: Declare two vars & use a for loop)
+2. Set the random color as the document's body's background.
+3. Display the hex code itself above the button. (Hint: Use either .innerHTML or .textContent)
+
+ON CSS:
+Style as desired.
+
+For more practice, try using RGB values instead of HEX. Probably declare vars r, g, & b and put them into parentheses with function, then set the document's body's background to the result of that.

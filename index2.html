@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+
+    <!--Link stylesheets-->
+    <link rel="stylesheet" href="./styling.css">
+    <link rel="stylesheet" href="./responsive.css">
+</head>
+<body onload="getRandColor()">
+    <div id="heading">
+        <h1>Welcome to the Random Color Generator!</h1>
+        <h2>Please select a color by clicking the button below.</h2>
+    </div>
+    <div class="color">
+        <span id="rgb"></span>
+        <button onclick="getRandColor()">Get New Color!</button>
+    </div>
+    <script>
+        const getRandColor = () => {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            let color = r + ', ' + g + ', ' + b;
+            document.body.style.backgroundColor = 'rgb(' + color + ')';
+            document.getElementById('rgb').innerHTML = 'RGB: ' + color;
+        }
+    </script>
+</body>
+</html>
