@@ -22,11 +22,6 @@
     </div>
     <script>
         function getNewColor() {
-            // Less-efficient way of declaring two vars:
-            /* var symbols, color;
-            symbols = '0123456789ABCDEF';
-            color = '#' */
-            // More-efficient way:
             let symbols = '0123456789ABCDEF';
             let color = '#'
             for (let i = 0; i < 6; i++) { // Hex code can only go up to 6, so i < 6. This loop runs once for every function call.
